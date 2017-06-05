@@ -208,9 +208,11 @@ line-height: 1;
         background-color: transparent !important;
         padding-top: 0 !important;
 	          font-size: 30px;
-    line-height: 1;
-    height: 33px;
+
     border-radius: 100px;
+	      
+    line-height: 1.2;
+    height: 36px;
 }
       }
       .typeform-title {
