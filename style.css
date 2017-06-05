@@ -90,7 +90,7 @@ header {
 .tembus{
 	background-color: transparent !important;
   border-width: 0;
-margin-bottom: 10px;
+margin-bottom: 0px;
 }
 .hvrcenter {
   display: inline-block;
@@ -1144,8 +1144,9 @@ margin-left: 30px;
 	@media screen and (max-width: 767px) {
 
 		#header h1 {
-			font-size: 1.55em;
+			font-size: 1.54em;
       text-decoration: underline;
+			margin-top:20px;
 		}
 
 		#header p {
