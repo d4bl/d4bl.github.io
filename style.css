@@ -90,6 +90,7 @@ header {
 .tembus{
 	background-color: transparent !important;
   border-width: 0;
+margin-bottom: 10px;
 }
 .hvrcenter {
   display: inline-block;
@@ -206,6 +207,11 @@ line-height: 1;
       .navbar-default .navbar-toggle {
         background-color: transparent !important;
         padding-top: 0 !important;
+	          font-size: 30px;
+    line-height: 1;
+    height: 33px;
+    border-radius: 100px;
+}
       }
       .typeform-title {
         display: none !important;
