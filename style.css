@@ -1,5 +1,5 @@
 
-@import url("https://fonts.googleapis.com/css?family=Roboto:400,700,900");
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,700");
 @import url(font)
 @font-face {
   		font-family: Menlo;
@@ -1520,7 +1520,7 @@ border-radius: 2px;
 	text-decoration:none !important;
 }
 #myNavbar .nav #donate-link {
-font-weight:900;
+font-weight:700;
 	
 }
 #donate a {color:#fff !important}
