@@ -1540,10 +1540,10 @@ color:#01939A !important;
 
 #myNavbar {
   transition: all 0.666s;
-  opacity: .25;
+  opacity: .5;
 }
 #myNavbar:hover {
-  opacity: 0.9;
+  opacity: 1;
 }
 
     #myNavbar .nav a{
