@@ -1520,6 +1520,7 @@ border-radius: 2px;
 }
 #donate a {color:#fff !important}
     @media screen and (min-width: 767px) {
+	    #donate {display:none;}
       .btn-link {
 
         padding: 0;
