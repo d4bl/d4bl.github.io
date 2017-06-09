@@ -1519,8 +1519,9 @@ border-radius: 2px;
 	color:#fff !important;
 	text-decoration:none !important;
 }
-#donate-link {
+#myNavbar .nav #donate-link {
 color:#01939A !important;
+	
 }
 #donate a {color:#fff !important}
     @media screen and (min-width: 767px) {
