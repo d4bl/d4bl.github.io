@@ -241,6 +241,7 @@ line-height: 1;
 			    background: #01939A;
 			    position: absolute;
 			    right: 0;
+				line-height:3;
 			    top: 95% !important;
 				bottom:0;
 			    font-size: 12px;
@@ -1517,6 +1518,9 @@ border-radius: 2px;
 #donate a {
 	color:#fff !important;
 	text-decoration:none !important;
+}
+#donate-link {
+color:#01939A !important;
 }
 #donate a {color:#fff !important}
     @media screen and (min-width: 767px) {
