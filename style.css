@@ -1539,8 +1539,8 @@ font-weight:700;
       }
 
 #myNavbar {
-  transition: all 0.666s;
-  opacity: .5;
+  transition: all 0.5s;
+  opacity: .333333;
 }
 #myNavbar:hover {
   opacity: 1;
