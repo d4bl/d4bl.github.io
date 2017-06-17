@@ -1511,7 +1511,7 @@ border-radius: 2px;
     right: 0;
     top: 3em;
     font-size: 12px;
-    padding: 1px 5px 1px 7px;
+    padding: 1px 5px 4px 7px;
     border-radius: 40px 0px 0 40px;
 	z-index:999;
 }
