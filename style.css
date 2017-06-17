@@ -239,7 +239,7 @@ line-height: 1;
 		@media screen and (max-width: 767px) {
 			#donate {
 			    background: #01939A;
-			    position: fixed;
+			    position: absolute;
 			    right: 0;
 				line-height:3;
 			    top: 95% !important;
@@ -1507,7 +1507,7 @@ border-radius: 2px;
 }
 #donate {
     background: #01939A;
-    position: absolute;
+    position: fixed;
     right: 0;
     top: 3em;
     font-size: 12px;
