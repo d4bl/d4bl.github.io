@@ -185,7 +185,7 @@ margin-bottom: 0px;
 	}
 
 	@media screen and (max-width: 480px) {
-		.bio {width:100%;}
+		.bio {width:100% !important;}
 		
     .qa-start-button {
       height: 44px !important;
