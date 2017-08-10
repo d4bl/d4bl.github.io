@@ -164,6 +164,12 @@ margin-bottom: 0px;
 
 
 }
+	.bio {width:20% !important;
+		display:inline-block;
+		float:left;
+		padding:10px;
+	}
+
 .hvrcenter:hover:before, .hvrcenter:focus:before, .hvrcenter:active:before {
   left: 0;
   right: 0;
@@ -1559,8 +1565,3 @@ font-weight:700;
   }
 
 
-	.bio {width:20% !important;
-		display:inline-block;
-		float:left;
-		padding:10px;
-	}
