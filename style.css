@@ -1556,3 +1556,10 @@ font-weight:700;
       color:#FFAB00 !important;
     }
   }
+
+
+	.bio {width:20% !important;
+		display:inline-block;
+		float:left;
+		padding:10px;
+	}
