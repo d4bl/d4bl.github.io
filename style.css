@@ -272,13 +272,15 @@ line-height: 1;
         background-color: #fff !important;
         height: auto;
         border-radius: 4px;
-            margin: 0px 2px;
+			margin: 0px 2px;
+
 
 
       }
       ul.icons  {
-        margin: 0  !important;
-      }
+		padding: 2px;
+	  }
+
 
       .navbar-default .navbar-toggle {
         background-color: transparent !important;
@@ -689,7 +691,11 @@ line-height: 1;
 		}
 
 	}
-
+#join-us {
+	align-self: end;
+    position: absolute;
+    bottom: 0;
+}
 /* Icon */
 
 	.icon {
@@ -740,10 +746,13 @@ line-height: 1;
       background: #fff;
 border-radius: 9999px;
 color: #000;
-padding: 0;
 margin-left: 30px;
   margin-top: 10px;
-		}
+  color: #000;
+  margin: 0;
+  padding: 4px;
+  display: flex;
+justify-content: center;		}
     ul.icons a {
       padding: 6px ;
       color:#212121 !important;
@@ -1203,12 +1212,14 @@ margin-left: 30px;
 	#header h1 {
 		font-size: 3.25em;
 		margin: 0 0 0.55em 0;
+		margin-top: 2rem;
 	}
 
 	#header p {
 		font-size: 1.35em;
 		line-height: 1.65em;
-    margin-bottom: 0;
+	margin-bottom: 0;
+
 	}
   ul.questions {
     margin-top: 100px;
@@ -1440,11 +1451,7 @@ BACKGROUND: #fff;
     .popover {
       max-width: 9999px;
     }
-    main.about{
-    max-width: 1000px;
-    margin: 0 auto;
-    float:none;
-    }
+
     .center {
     margin-top:50px;
 }
@@ -1559,6 +1566,9 @@ font-weight:700;
 #myNavbar {
   transition: all 0.5s;
   opacity: .333333;
+  display: flex !important;
+  justify-content: space-evenly;
+  flex-direction: row-reverse
 }
 #myNavbar:hover {
   opacity: 1;
@@ -1574,3 +1584,15 @@ font-weight:700;
       color:#FFAB00 !important;
     }
   }
+
+
+  ul.icons li {
+	margin:0;
+	padding:0;
+}
+.icons li#join-us a{
+	top: 7px;
+    font-size: 13px !important;
+    text-align: center;
+    text-decoration: overline;
+}
