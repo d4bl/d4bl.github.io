@@ -74,7 +74,9 @@ hvr-sweep-to-right:before {
 	article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
 		display: block;
 	}
-
+h6 {
+	margin: 20px 0;
+}
 	body {
 		line-height: 1;
 	}
@@ -1595,4 +1597,37 @@ font-weight:700;
     font-size: 13px !important;
     text-align: center;
     text-decoration: overline;
+}
+
+button.fa-envelope-o {
+	margin-top: -15px;
+	margin-bottom: 5px;
+	position: relative;
+	top:-1px;
+}
+
+.team-container {
+	display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.siema iframe {
+	height: 250px;
+	padding: 0 10px;
+}
+
+.sign-letter {
+	margin-top:44px;
+}
+
+.action-content {
+	margin-top:44px;
+	padding-bottom:22px;
+	border-bottom:1px solid #1fcaa7;
+}
+
+.about a:after {
+	content: " | ";
+	color: #fff;
+	display: block;
 }
