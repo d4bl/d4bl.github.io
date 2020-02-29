@@ -11,10 +11,7 @@
 		letter-spacing: -0.01em;
 		line-height: 1.65em;
 	}
-	Eventually by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
+
 
 /* Reset */
 
@@ -28,7 +25,15 @@
     transition-duration: 0.3s;
     transition-property: transform;
 }
-
+.donate {
+	border:2px solid rgba(255,255,255,.5);
+	padding: .5rem;
+}
+.donate:hover {
+	border:2px solid #ddd;
+	background-color:rgba(255,255,255,.1) ;
+	padding: .5rem;
+}
 .hvr-grow:hover,
 .hvr-grow:focus,
 .hvr-grow:active {
@@ -476,7 +481,7 @@ line-height: 1;
 		@media screen and (max-width: 1680px) {
 
 			body, input, select, textarea {
-				font-size: 13pt;
+				font-size: 18px;
 			}
 
 		}
@@ -484,7 +489,7 @@ line-height: 1;
 		@media screen and (max-width: 1280px) {
 
 			body, input, select, textarea {
-				font-size: 13pt;
+				font-size: 16px;
 			}
 
 		}
@@ -492,7 +497,7 @@ line-height: 1;
 		@media screen and (max-width: 980px) {
 
 			body, input, select, textarea {
-				font-size: 12pt;
+				font-size: 16px;
 			}
 
 		}
@@ -548,6 +553,7 @@ line-height: 1;
 		font-weight: 700;
 		line-height: 1em;
 		margin: 0 0 1em 0;
+		font-size: 200%;
 	}
 
 		h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
@@ -1546,6 +1552,17 @@ border-radius: 2px;
 	color:#fff !important;
 	text-decoration:none !important;
 }
+.panel a{
+	background: #fff;
+	color: #000;
+	padding: .5rem;
+	width: auto !important;
+	border-radius: 100px;
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: 900;
+	color:#0054FF
+}
 #myNavbar .nav #donate-link {
 font-weight:700;
 
@@ -1603,7 +1620,7 @@ button.fa-envelope-o {
 	margin-top: -15px;
 	margin-bottom: 5px;
 	position: relative;
-	top:-1px;
+
 }
 
 .team-container {
@@ -1625,9 +1642,60 @@ button.fa-envelope-o {
 	padding-bottom:22px;
 	border-bottom:1px solid #1fcaa7;
 }
+.panel {
+	padding: 1rem;
+	border-radius: 0;
+	padding-bottom: 0;
+}
 
-.about a:after {
-	content: " | ";
-	color: #fff;
+.m-5 {
+	margin: 1rem;
+}
+.about a{
+
 	display: block;
+}
+.about a:before{
+content:"* "
+}
+.flex {
+	display: flex;
+}
+.column {
+	flex-direction: column;
+}
+.bg-primary {
+	background-color: #e74c3c;
+}
+.bg-primary:hover {
+	background-color: #A31F34;
+}
+.sub-nav {
+	display: flex;
+    width: 100%;
+		justify-content: center;
+		border: 2px solid #c5c92b;
+    margin: 4rem auto;
+}
+.sub-nav a {
+	margin: 6px 10px;
+	color: #c5c92b;
+	text-decoration: underline;
+
+}
+.sub-nav a:hover {
+color:#0054FF !important;
+
+}
+
+programs {
+	margin-top: 1rem;
+}
+
+.flex-center {
+display: flex;
+justify-content: center;
+}
+.flex-center button {
+	margin: 4px;
 }

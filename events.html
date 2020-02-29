@@ -1,4 +1,5 @@
 <!doctype html>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.common.dev.js"></script>
 
 <html lang="en">
 
@@ -70,12 +71,13 @@
           <ul class="icons nav navbar-nav navbar-right">
             <li><a href="https://twitter.com/data4blacklives" target="_blank" class="icon fa-twitter"><span
                   class="label">Twitter</span></a></li>
-                  <li><a href="https://www.instagram.com/data4blacklives/?hl=en" target="_blank" class="icon fa-instagram"><span
-                    class="label">Twitter</span></a></li>
+            <li><a href="https://www.instagram.com/data4blacklives/?hl=en" target="_blank"
+                class="icon fa-instagram"><span class="label">Twitter</span></a></li>
             <li><a href="https://github.com/d4bl" target="_blank" class="icon fa fa-github"><span class="label"
                   target="_top">Email</span></a></li>
             <li id="join-us">
-              <a target="_BLANK" href="https://docs.google.com/forms/d/e/1FAIpQLSdvyFQK_9n2GPvCRxuEetXHy4bsaeW99A22PprMSqjpMx-wWQ/viewform">
+              <a target="_BLANK"
+                href="https://docs.google.com/forms/d/e/1FAIpQLSdvyFQK_9n2GPvCRxuEetXHy4bsaeW99A22PprMSqjpMx-wWQ/viewform">
                 JOIN US
               </a>
             </li>
@@ -87,7 +89,7 @@
             <li><a href="/conference.html" class="hvrcenter">Conference</a></li>
             <li><a href="/action.html" class="hvrcenter">Action</a></li>
             <li><a href="/press.html" class="hvrcenter">Press</a></li>
-             <li><a href="/about.html" class="hvrcenter">About</a></li>
+            <li><a href="/about.html" class="hvrcenter">About</a></li>
             <li><a target="_BLANK" href="https://medium.com/@Data4BlackLives" class="hvrcenter">Blog</a></li>
 
 
@@ -103,22 +105,48 @@
     <div class="row">
       <header class="col-md-12" id="header">
         <h1>Data for Black Lives</h1>
-        <p>Data as protest. Data as accountability. Data as collective action.<br><br>Sign up for our mailing list below or <a class="donate" target="_BLANK" href="https://secure.actblue.com/donate/data-for-black-lives-1?refcode=d4blsite">Donate Now</a></p>
+
       </header>
     </div>
+    <div id="app" class="row">
+      <div class="panel panel-default bg-primary col-md-6 " v-for="entry in entries">
 
+        <div class="bg-primary">
+          <div class="col-sm-6">
+            <h3>{{entry.gsx$eventtitle.$t}}</h3>
+            <p>{{entry.gsx$eventsponsor.$t}}</p>
+            <div>
+              <a v-if="entry.gsx$registerlink.$t.indexOf('@') === -1" :href="entry.gsx$registerlink.$t">
+                Register Now
+              </a>
+              <a v-else :href="'mailto:'+entry.gsx$registerlink.$t">
+                Register Now
+              </a>
+            </div>
 
-    <!-- Signup Form -->
-    <div class="row">
-      <div class="col-md-6 col-sm-12">
-        <div class="typeform-widget" data-url="https://d4bl.typeform.com/to/wg6agF" data-transparency="100"
-          data-hide-headers=true data-hide-footer=true style="width: 100%; height: 350px;"> </div>
-        <script> (function () { var qs, js, q, s, d = document, gi = d.getElementById, ce = d.createElement, gt = d.getElementsByTagName, id = "typef_orm", b = "https://embed.typeform.com/"; if (!gi.call(d, id)) { js = ce.call(d, "script"); js.id = id; js.src = b + "embed.js"; q = gt.call(d, "script")[0]; q.parentNode.insertBefore(js, q) } })() </script>
-        <div style="font-family: Sans-Serif;font-size: 12px;color: #999;opacity: 0.5; padding-top: 5px;"> </div>
+          </div>
+
+          <div class="col-sm-6 flex">
+            <div class="flex column">
+              <p>
+                <span class="b">At </span> {{entry.gsx$eventlocation.$t}}
+              </p>
+              <p>
+                <h6>DATE</h6>
+                <div v-if="entry.gsx$eventstartdate.$t != entry.gsx$eventenddate.$t">
+                  {{entry.gsx$eventstartdate.$t}}
+                </div>
+                <div v-else>
+                  {{entry.gsx$eventstartdate.$t}} - {{entry.gsx$eventenddate.$t}}
+                </div>
+              </p>
+            </div>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+
       </div>
-      <div class="col-md-6 text-center">
 
-      </div>
     </div>
 
 
@@ -201,3 +229,32 @@
 </body>
 
 </html>
+<script>
+  var cv = new Vue({
+    el: "#app",
+
+    data: {
+      entries: [],
+      sheetUrl:
+        "https://spreadsheets.google.com/feeds/list/1UCcr1PlZ_9xm4Ssrevyerhksg4Yjv2in5YnMZNdwsEQ/1/public/values?alt=json"
+    },
+
+    created() {
+      this.fetchData();
+    },
+
+    methods: {
+      fetchData: function () {
+        var xhr = new XMLHttpRequest();
+        var self = this;
+        xhr.open("GET", self.sheetUrl);
+        xhr.onload = function () {
+          self.entries = JSON.parse(xhr.responseText);
+
+          self.entries = self.entries.feed.entry;
+        };
+        xhr.send();
+      }
+    }
+  });
+</script>
