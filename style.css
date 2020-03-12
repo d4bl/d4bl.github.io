@@ -178,7 +178,7 @@ margin-bottom: 0px;
 }
 	.bio {width:20% !important;
 		display:inline-block;
-		float:left;
+	
 		padding:10px;
 	}
 
@@ -211,8 +211,7 @@ line-height: 1;
 	}
 
 	html, body {
-		height: 100%;
-		overflow-x: hidden;
+
 		width: 100%;
 	}
 
@@ -1623,10 +1622,21 @@ button.fa-envelope-o {
 
 }
 
+.bio h6 {
+	text-align: center;
+	margin-top: 0 !important;
+
+}
+.bio p {
+	margin: 1em 0; 
+	font-size: 15px;
+}
 .team-container {
 	display: flex;
-    align-items: center;
-    justify-content: center;
+	justify-content: center;
+}
+.team-container .bio {
+	width:Calc( 100% / 7) !important
 }
 .siema iframe {
 	height: 250px;
@@ -1696,6 +1706,27 @@ programs {
 display: flex;
 justify-content: center;
 }
+.conference .flex-center button{
+	margin: 0;
+	border-radius: 0;
+	width: 100%;
+	margin-bottom: 1em;
+}
+.conference .flex-center button.next-2,.conference .flex-center button.next-1 {
+	background:#2098D1;
+}
 .flex-center button {
 	margin: 4px;
+}
+.img-fluid {
+	max-width: 100%;
+	margin: 0 auto;
+	border-radius: 10%;
+	border:2px solid #8A8B8C;
+}
+
+.bio {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 }
