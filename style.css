@@ -546,6 +546,11 @@ line-height: 1;
 	p {
 		margin: 0 0 2em 0;
 	}
+	.modal p,.modal p * {
+		font-size:15px !important;
+		margin: 0 0 .67em 0;
+		font-family: 'Open Sans', Verdana !important;
+	}
 
 	h1, h2, h3, h4, h5, h6 {
 		color: #fff;
@@ -1729,4 +1734,140 @@ justify-content: center;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
+}
+ #reports .modal a{
+color:#001C98;
+letter-spacing: normal;
+font-weight: normal;
+text-transform: none;
+text-decoration: underline !important;
+}
+
+.modal-vue .overlay {
+  position: fixed;
+  z-index: 9998;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .85);
+}
+
+.modal-vue .modal {
+  position: relative;
+  width: 300px;
+  z-index: 9999;
+  margin: 0 auto;
+  padding: 20px 30px;
+	background-color: #fff;
+	display: block;
+		position: fixed;
+		width:800px;
+    max-width: 80%;
+    margin-top: 20px;
+    margin-bottom: 4rem;
+		overflow-y: scroll;
+		color:#000;
+}
+
+.modal-vue .close{
+  position: absolute;
+  top:-3px;
+	right: 10px;
+	color: #000 !important;
+	font-size: 2rem;
+	line-height: 0;
+
+	letter-spacing: 3px;
+
+	font-size: 1.5rem !important;
+}
+
+.container {
+  margin: 0 auto;
+  text-align: center;
+  padding: 2em 0;
+}
+.container.reports {
+  margin: 0 auto;
+  text-align: left;
+  padding: 2em 0;
+}
+
+/* Icon Font*/
+[class*="fontawesome-"]:before {
+  font-family: 'FontAwesome', sans-serif;
+  font-size: 1.1em;
+}
+#reports > *{
+	padding: 1rem;;
+}
+#reports .actions {
+	justify-content:space-between;
+	align-items: center;
+}
+/* Button Styling */
+#reports main button,#reports main a {
+  border-radius: 50px;
+  border: medium none;
+
+  color: white;
+  font-size: 0.8em;
+  font-family: 'Open Sans', Verdana;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 3px;
+  transition: background 350ms cubic-bezier(0, 0, 0.25, 1) 0s;
+}
+#reports main  button:hover {
+  transition: background 350ms cubic-bezier(0, 0, 0.25, 1) 0s;
+  cursor: pointer;
+}
+#reports main  button:focus {
+  outline: none;
+}
+
+/* Background Colors*/
+.green {
+  background-color: #14AD80;
+}
+
+.blue {
+  background-color: #339499;
+}
+
+.red {
+  background-color: #DC6957;
+}
+
+.amber {
+  background-color: #f2b844;
+}
+
+.color-1 {
+  background-color: #0F8065;
+}
+.color-1:hover {
+  background-color: #0E725A;
+}
+
+.color-2 {
+  background-color: #237070;
+}
+.color-2:hover {
+  background-color: #236F6F;
+}
+
+.color-3 {
+  background-color: #A34F41;
+}
+.color-3:hover {
+  background-color: #97493B;
+}
+
+.color-4 {
+  background-color: #da970f;
+}
+.color-4:hover {
+  background-color: #c2860d;
 }
