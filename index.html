@@ -1,204 +1,363 @@
-<!doctype html>
+<!DOCTYPE html>
 
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+      crossorigin="anonymous"
+    />
+    <title>Data 4 Black Lives</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
 
-<head>
-  <meta charset="utf-8">
-  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
-    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-  <title>Data 4 Black Lives</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png" />
+    <link
+      rel="apple-touch-icon"
+      sizes="114x114"
+      href="/apple-icon-114x114.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="120x120"
+      href="/apple-icon-120x120.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="144x144"
+      href="/apple-icon-144x144.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="152x152"
+      href="/apple-icon-152x152.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/apple-icon-180x180.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="/android-icon-192x192.png"
+    />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
+    <meta name="theme-color" content="#ffffff" />
 
-  <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
-  <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
-  <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
-  <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
-  <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
-  <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
-  <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
-  <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
-  <link rel="icon" type="image/png" sizes="192x192" href="/android-icon-192x192.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <link rel="manifest" href="/manifest.json">
-  <meta name="msapplication-TileColor" content="#ffffff">
-  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
-  <meta name="theme-color" content="#ffffff">
+    <link
+      href="https://fonts.googleapis.com/css?family=Space+Mono"
+      rel="stylesheet"
+    />
+    <link
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
 
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.min.js"
+      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+      crossorigin="anonymous"
+    ></script>
+    <style media="screen">
+      a.stream-link {
+        background: #a31f34;
+        text-decoration: underline;
+        color: #fff !important;
+        padding: 3px 6px;
+      }
 
-  <link href="https://fonts.googleapis.com/css?family=Space+Mono" rel="stylesheet">
-  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-  <link rel="stylesheet" href="style.css">
+      a.stream-link:hover {
+        background: rgba(0, 0, 0, 0);
+        text-decoration: line-through;
+        border: 2px solid #fff;
+      }
+    </style>
+  </head>
 
-  <script src="https://code.jquery.com/jquery-3.2.1.min.js"
-    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous">
-    </script>
-  <style media="screen">
-    a.stream-link {
-      background: #A31F34;
-      text-decoration: underline;
-      color: #fff !important;
-      padding: 3px 6px;
-    }
-
-    a.stream-link:hover {
-      background: rgba(0, 0, 0, .0);
-      text-decoration: line-through;
-      border: 2px solid #fff;
-
-    }
-  </style>
-</head>
-
-<body class="container">
-  <div class="hidden-md hidden-lg hidden-xl" id="donate" target="_blank" class="hvr-grow"><a target="_blank"
-      href="https://secure.actblue.com/donate/data-for-black-lives-1?refcode=d4blsite">Donate to D4BL</a></div>
-
-  <header style="">
-    <nav class="navbar navbar-default tembus navbar-fixed-to">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-            <i class="fa  fa-angle-double-down "></i>
-          </button>
-
-        </div>
-        <div class="collapse navbar-collapse" id="myNavbar">
-          <ul class="icons nav navbar-nav navbar-right">
-            <li><a href="https://twitter.com/data4blacklives" target="_blank" class="icon fa-twitter"><span
-                  class="label">Twitter</span></a></li>
-                  <li><a href="https://www.instagram.com/data4blacklives/?hl=en" target="_blank" class="icon fa-instagram"><span
-                    class="label">Twitter</span></a></li>
-            <li><a href="https://github.com/d4bl" target="_blank" class="icon fa fa-github"><span class="label"
-                  target="_top">Email</span></a></li>
-            <li id="join-us">
-              <a target="_BLANK" href="https://docs.google.com/forms/d/e/1FAIpQLSdvyFQK_9n2GPvCRxuEetXHy4bsaeW99A22PprMSqjpMx-wWQ/viewform">
-                JOIN US
-              </a>
-            </li>
-          </ul>
-
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="/" class="hvrcenter">Home</a></li>
-            <li><a href="/programs.html" class="hvrcenter">Programs</a></li>
-            <li><a href="/conference.html" class="hvrcenter">Conference</a></li>
-            <li><a href="/events.html" class="hvrcenter">Events</a></li>
-            <li><a href="/action.html" class="hvrcenter">Action</a></li>
-            <li><a href="/press.html" class="hvrcenter">Press</a></li>
-             <li><a href="/about.html" class="hvrcenter">About</a></li>
-            <li><a target="_BLANK" href="https://medium.com/@Data4BlackLives" class="hvrcenter">Blog</a></li>
-
-
-
-          </ul>
-        </div>
-      </div>
-    </nav>
-  </header>
-  <main class="col-sm-12">
-    <!-- Header -->
-
-    <div class="row">
-      <header class="col-md-12" id="header">
-        <h1>Data for Black Lives</h1>
-        <p>Data as protest. Data as accountability. Data as collective action.<br><br>Sign up for our mailing list below or <a class="donate" target="_BLANK" href="https://secure.actblue.com/donate/data-for-black-lives-1?refcode=d4blsite">Donate Now</a></p>
-      </header>
+  <body class="container">
+    <div
+      class="hidden-md hidden-lg hidden-xl"
+      id="donate"
+      target="_blank"
+      class="hvr-grow"
+    >
+      <a
+        target="_blank"
+        href="https://secure.actblue.com/donate/data-for-black-lives-1?refcode=d4blsite"
+        >Donate to D4BL</a
+      >
     </div>
 
+    <header style="">
+      <nav class="navbar navbar-default tembus navbar-fixed-to">
+        <div class="container">
+          <div class="navbar-header">
+            <button
+              type="button"
+              class="navbar-toggle"
+              data-toggle="collapse"
+              data-target="#myNavbar"
+            >
+              <i class="fa fa-angle-double-down"></i>
+            </button>
+          </div>
+          <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="icons nav navbar-nav navbar-right">
+              <li>
+                <a
+                  href="https://twitter.com/data4blacklives"
+                  target="_blank"
+                  class="icon fa-twitter"
+                  ><span class="label">Twitter</span></a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://www.instagram.com/data4blacklives/?hl=en"
+                  target="_blank"
+                  class="icon fa-instagram"
+                  ><span class="label">Twitter</span></a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://github.com/d4bl"
+                  target="_blank"
+                  class="icon fa fa-github"
+                  ><span class="label" target="_top">Email</span></a
+                >
+              </li>
+              <li id="join-us">
+                <a
+                  target="_BLANK"
+                  href="https://docs.google.com/forms/d/e/1FAIpQLSdvyFQK_9n2GPvCRxuEetXHy4bsaeW99A22PprMSqjpMx-wWQ/viewform"
+                >
+                  JOIN US
+                </a>
+              </li>
+            </ul>
 
-    <!-- Signup Form -->
-    <div class="row">
-      <div class="col-md-6 col-sm-12">
-        <div class="typeform-widget" data-url="https://d4bl.typeform.com/to/wg6agF" data-transparency="100"
-          data-hide-headers=true data-hide-footer=true style="width: 100%; height: 350px;"> </div>
-        <script> (function () { var qs, js, q, s, d = document, gi = d.getElementById, ce = d.createElement, gt = d.getElementsByTagName, id = "typef_orm", b = "https://embed.typeform.com/"; if (!gi.call(d, id)) { js = ce.call(d, "script"); js.id = id; js.src = b + "embed.js"; q = gt.call(d, "script")[0]; q.parentNode.insertBefore(js, q) } })() </script>
-        <div style="font-family: Sans-Serif;font-size: 12px;color: #999;opacity: 0.5; padding-top: 5px;"> </div>
-      </div>
-      <div class="col-md-6 text-center">
-
-      </div>
-    </div>
-
-
-
-
-
-
-
-    <div class="clearfix">
-
-    </div>
-    <!-- Footer -->
-    <footer class="row" id="footer">
-      <ul class="icons hidden">
-        <li><a href="https://twitter.com/data4blacklives" target="_blank" class="icon fa-twitter"><span
-              class="label">Twitter</span></a></li>
-        <li><a href="mailto:data4blacklives@gmail.com" class="icon fa-envelope-o"><span class="label"
-              target="_top">Email</span></a></li>
-      </ul>
-      <ul class="copyright">
-        <li>&copy; Data for Black Lives.</li>
-        <li>Credits: <a href="http://d4bl.org">Data for Black Lives</a></li>
-      </ul>
-    </footer>
-  </main>
-
-
-  <div class="modal fade" id="squarespaceModal" tabindex="-1" role="dialog" aria-labelledby="modalLabel"
-    aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span
-              class="sr-only">Close</span></button>
-          <h3 class="modal-title" id="lineModalLabel">EMAIL D4BL</h3>
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="/" class="hvrcenter">Home</a></li>
+              <li><a href="/programs.html" class="hvrcenter">Programs</a></li>
+              <li>
+                <a href="/conference.html" class="hvrcenter">Conference</a>
+              </li>
+              <li><a href="/events.html" class="hvrcenter">Events</a></li>
+              <li><a href="/action.html" class="hvrcenter">Action</a></li>
+              <li><a href="/press.html" class="hvrcenter">Press</a></li>
+              <li><a href="/about.html" class="hvrcenter">About</a></li>
+              <li>
+                <a
+                  target="_BLANK"
+                  href="https://medium.com/@Data4BlackLives"
+                  class="hvrcenter"
+                  >Blog</a
+                >
+              </li>
+              <li>
+                <a target="_BLANK" href="/reports.html" class="hvrcenter"
+                  >Reports</a
+                >
+              </li>
+            </ul>
+          </div>
         </div>
-        <div class="modal-body email ">
+      </nav>
+    </header>
+    <main class="col-sm-12">
+      <!-- Header -->
 
-          <!-- content goes here -->
-          <form method="POST" action="http://formspree.io/data4blacklives@gmail.com">
-            <label>Email Adress</label>
-            <input type="email" name="email" placeholder="Your email">
-            <label>Message</label>
-            <textarea name="message" placeholder="Your message"></textarea>
-            <br>
-            <button class="btn btn-block btn-submit" type="submit">Send</button>
-          </form>
+      <div class="row">
+        <header class="col-md-12" id="header">
+          <h1>Data for Black Lives</h1>
+          <p>
+            Data as protest. Data as accountability. Data as collective
+            action.<br /><br />Sign up for our mailing list below or
+            <a
+              class="donate"
+              target="_BLANK"
+              href="https://secure.actblue.com/donate/data-for-black-lives-1?refcode=d4blsite"
+              >Donate Now</a
+            >
+          </p>
+        </header>
+      </div>
 
+      <!-- Signup Form -->
+      <div class="row">
+        <div class="col-md-6 col-sm-12">
+          <div
+            class="typeform-widget"
+            data-url="https://d4bl.typeform.com/to/wg6agF"
+            data-transparency="100"
+            data-hide-headers="true"
+            data-hide-footer="true"
+            style="width: 100%; height: 350px;"
+          ></div>
+          <script>
+            (function () {
+              var qs,
+                js,
+                q,
+                s,
+                d = document,
+                gi = d.getElementById,
+                ce = d.createElement,
+                gt = d.getElementsByTagName,
+                id = "typef_orm",
+                b = "https://embed.typeform.com/";
+              if (!gi.call(d, id)) {
+                js = ce.call(d, "script");
+                js.id = id;
+                js.src = b + "embed.js";
+                q = gt.call(d, "script")[0];
+                q.parentNode.insertBefore(js, q);
+              }
+            })();
+          </script>
+          <div
+            style="
+              font-family: Sans-Serif;
+              font-size: 12px;
+              color: #999;
+              opacity: 0.5;
+              padding-top: 5px;
+            "
+          ></div>
         </div>
-        <div class="modal-footer hidden">
-          <div class="btn-group btn-group-justified" role="group" aria-label="group button">
-            <div class="btn-group" role="group">
-              <button type="button" class="btn btn-default" data-dismiss="modal" role="button">Close</button>
-            </div>
-            <div class="btn-group btn-delete hidden" role="group">
-              <button type="button" id="delImage" class="btn btn-default btn-hover-red" data-dismiss="modal"
-                role="button">Delete</button>
-            </div>
-            <div class="btn-group" role="group">
-              <button type="button" id="saveImage" class="btn btn-default btn-hover-green" data-action="save"
-                role="button">Save</button>
+        <div class="col-md-6 text-center"></div>
+      </div>
+
+      <div class="clearfix"></div>
+      <!-- Footer -->
+      <footer class="row" id="footer">
+        <ul class="icons hidden">
+          <li>
+            <a
+              href="https://twitter.com/data4blacklives"
+              target="_blank"
+              class="icon fa-twitter"
+              ><span class="label">Twitter</span></a
+            >
+          </li>
+          <li>
+            <a
+              href="mailto:data4blacklives@gmail.com"
+              class="icon fa-envelope-o"
+              ><span class="label" target="_top">Email</span></a
+            >
+          </li>
+        </ul>
+        <ul class="copyright">
+          <li>&copy; Data for Black Lives.</li>
+          <li>Credits: <a href="http://d4bl.org">Data for Black Lives</a></li>
+        </ul>
+      </footer>
+    </main>
+
+    <div
+      class="modal fade"
+      id="squarespaceModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="modalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">
+              <span aria-hidden="true">×</span
+              ><span class="sr-only">Close</span>
+            </button>
+            <h3 class="modal-title" id="lineModalLabel">EMAIL D4BL</h3>
+          </div>
+          <div class="modal-body email">
+            <!-- content goes here -->
+            <form
+              method="POST"
+              action="http://formspree.io/data4blacklives@gmail.com"
+            >
+              <label>Email Adress</label>
+              <input type="email" name="email" placeholder="Your email" />
+              <label>Message</label>
+              <textarea name="message" placeholder="Your message"></textarea>
+              <br />
+              <button class="btn btn-block btn-submit" type="submit">
+                Send
+              </button>
+            </form>
+          </div>
+          <div class="modal-footer hidden">
+            <div
+              class="btn-group btn-group-justified"
+              role="group"
+              aria-label="group button"
+            >
+              <div class="btn-group" role="group">
+                <button
+                  type="button"
+                  class="btn btn-default"
+                  data-dismiss="modal"
+                  role="button"
+                >
+                  Close
+                </button>
+              </div>
+              <div class="btn-group btn-delete hidden" role="group">
+                <button
+                  type="button"
+                  id="delImage"
+                  class="btn btn-default btn-hover-red"
+                  data-dismiss="modal"
+                  role="button"
+                >
+                  Delete
+                </button>
+              </div>
+              <div class="btn-group" role="group">
+                <button
+                  type="button"
+                  id="saveImage"
+                  class="btn btn-default btn-hover-green"
+                  data-action="save"
+                  role="button"
+                >
+                  Save
+                </button>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
 
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+      integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+      crossorigin="anonymous"
+    ></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
 
-
-
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
-    integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-    crossorigin="anonymous"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
-
-  <script src="main.js"></script>
-
-</body>
-
+    <script src="main.js"></script>
+  </body>
 </html>

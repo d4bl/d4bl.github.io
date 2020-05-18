@@ -477,13 +477,13 @@ line-height: 1;
 		line-height: 1.65em;
 	}
 
-		@media screen and (max-width: 1680px) {
+
 
 			body, input, select, textarea {
 				font-size: 18px;
 			}
 
-		}
+		
 
 		@media screen and (max-width: 1280px) {
 
@@ -511,7 +511,9 @@ line-height: 1;
 		}
 
 		@media screen and (max-width: 480px) {
-
+			#reports .actions {
+				flex-direction: column;
+			}
 			body, input, select, textarea {
 				font-size: 12pt;
 			}
@@ -704,9 +706,8 @@ line-height: 1;
 
 	}
 #join-us {
-	align-self: end;
-    position: absolute;
-    bottom: 0;
+	position: absolute;
+	top: 55px;
 }
 /* Icon */
 
