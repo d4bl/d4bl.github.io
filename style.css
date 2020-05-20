@@ -197,6 +197,12 @@ margin-bottom: 0px;
 	}
 
 	@media screen and (max-width: 480px) {
+		.team-container {
+			flex-direction: column;
+		}
+		.team-container .bio {
+			width:Calc( 100% / 1) !important
+		}
 		.bio {width:100% !important;}
 
     .qa-start-button {
@@ -1646,7 +1652,7 @@ button.fa-envelope-o {
 	justify-content: center;
 }
 .team-container .bio {
-	width:Calc( 100% / 7) !important
+	width:Calc( 100% / 7);
 }
 .siema iframe {
 	height: 250px;
