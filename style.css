@@ -753,7 +753,9 @@ line-height: 1;
 		}
 
 		ul.icons {
+			padding-bottom: 10px;
 			cursor: default;
+			align-self: baseline;
 			list-style: none;
 			padding-left: 0;
       background: #fff;
@@ -763,7 +765,8 @@ margin-left: 30px;
   margin-top: 10px;
   color: #000;
   margin: 0;
-  padding: 4px;
+	padding: 4px;
+	padding-bottom: 10px;
   display: flex;
 justify-content: center;		}
     ul.icons a {
@@ -781,6 +784,7 @@ justify-content: center;		}
 
 				ul.icons li:last-child {
 					padding-right: 0;
+					margin-top:6px;
 				}
 
 				ul.icons li .icon:before {
@@ -1615,8 +1619,8 @@ font-weight:700;
 	padding:0;
 }
 .icons li#join-us a{
-	top: 7px;
-    font-size: 13px !important;
+	top: 0;
+    font-size: 12px !important;
     text-align: center;
     text-decoration: overline;
 }
