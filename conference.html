@@ -3,425 +3,568 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
-    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-  <title>Data 4 Black Lives | About Us</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-  <link href="https://fonts.googleapis.com/css?family=Space+Mono" rel="stylesheet">
-  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-  <script src="https://cdn.jsdelivr.net/npm/siema@1.5.1/dist/siema.min.js"></script>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="utf-8">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <title>Data 4 Black Lives | About Us</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link href="https://fonts.googleapis.com/css?family=Space+Mono" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/siema@1.5.1/dist/siema.min.js"></script>
+    <link rel="stylesheet" href="style.css">
 
-  <script src="https://code.jquery.com/jquery-3.2.1.min.js"
-    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ramda/0.25.0/ramda.min.js"></script>
     </script>
-  <style>
-    .card {
-      border-top: 1px #000 solid;
-      padding-top: 15px;
-      padding-bottom: 30px;
-    }
-
-    .con-info {
-      display: block;
-      background-color: #fff;
-      color: #000;
-      padding: 15px 15px 0 15px;
-      margin-top: 60px;
-      opacity: .99;
-      margin-bottom: 30px;
-      border-radius: 4px;
-      font-size: 14px;
-    }
-
-    .section-detail em {
-      text-transform: uppercase;
-    }
-
-    @media (max-width: 667px) {
-      .con-info {
-        margin: 0 -30px;
-        border-radius: 0;
-      }
-
-    }
-
-    .panel-list-headline {
-      display: inline-block;
-      text-transform: uppercase;
-      margin-bottom: 8px;
-      -webkit-box-sizing: content-box;
-      -moz-box-sizing: content-box;
-      box-sizing: content-box;
-      overflow: hidden;
-      border: none;
-      font: normal 70px/1 "VT323", Helvetica, sans-serif;
-      color: #A31F34;
-      text-align: center;
-      -o-text-overflow: ellipsis;
-      text-overflow: ellipsis;
-      text-shadow: 3px 3px 0 rgba(0, 0, 0, .2);
-
-      font-size: 20px;
-      line-height: 1.5;
-
-    }
-
-    h3.text-center {
-      color: #000;
-    }
-
-    .section-detail {
-      text-align: left;
-      padding-left: 30px;
-      /* padding: 15px; */
-      padding: 15px;
-      background: #F5F5F5;
-      padding-top: 30px;
-      margin-bottom: 30px;
-      border-bottom: 1px solid #eeeeee;
-      background: -moz-linear-gradient(top, #ffffff 0%, #eeeeee 100%);
-      background: -webkit-linear-gradient(top, #ffffff 0%, #eeeeee 100%);
-      background: linear-gradient(to bottom, #ffffff 0%, #eeeeee 100%);
-      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#eeeeee', GradientType=0);
-
-    }
-
-    .conference-section {
-      margin-bottom: 30px;
-      padding-bottom: 30px;
-      border-bottom: 2px solid currentColor;
-    }
-
-    .row .col-md-2 p {
-      font-size: 12px;
-    }
-
-    a.stream-link {
-      background: #A31F34;
-      text-decoration: underline;
-      color: #fff !important;
-      padding: 3px 6px;
-    }
-
-    a.stream-link:hover {
-      background: #000;
-      text-decoration: line-through;
-      /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#a0000e+0,000000+100 */
-      /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#a0000e+0,000000+100 */
-
-    }
-  </style>
+    <style>
+        .card {
+            border-top: 1px #000 solid;
+            padding-top: 15px;
+            padding-bottom: 30px;
+        }
+        
+        .con-info {
+            display: block;
+            background-color: #fff;
+            color: #000;
+            padding: 15px 15px 0 15px;
+            margin-top: 60px;
+            opacity: .99;
+            margin-bottom: 30px;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        
+        .section-detail em {
+            text-transform: uppercase;
+        }
+        
+        @media (max-width: 667px) {
+            .con-info {
+                margin: 0 -30px;
+                border-radius: 0;
+            }
+        }
+        
+        .panel-list-headline {
+            display: inline-block;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+            -webkit-box-sizing: content-box;
+            -moz-box-sizing: content-box;
+            box-sizing: content-box;
+            overflow: hidden;
+            border: none;
+            font: normal 70px/1 "VT323", Helvetica, sans-serif;
+            color: #A31F34;
+            text-align: center;
+            -o-text-overflow: ellipsis;
+            text-overflow: ellipsis;
+            text-shadow: 3px 3px 0 rgba(0, 0, 0, .2);
+            font-size: 20px;
+            line-height: 1.5;
+        }
+        
+        h3.text-center {
+            color: #000;
+        }
+        
+        .section-detail {
+            text-align: left;
+            padding-left: 30px;
+            /* padding: 15px; */
+            padding: 15px;
+            background: #F5F5F5;
+            padding-top: 30px;
+            margin-bottom: 30px;
+            border-bottom: 1px solid #eeeeee;
+            background: -moz-linear-gradient(top, #ffffff 0%, #eeeeee 100%);
+            background: -webkit-linear-gradient(top, #ffffff 0%, #eeeeee 100%);
+            background: linear-gradient(to bottom, #ffffff 0%, #eeeeee 100%);
+            filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#eeeeee', GradientType=0);
+        }
+        
+        .conference-section {
+            margin-bottom: 30px;
+            padding-bottom: 30px;
+            border-bottom: 2px solid currentColor;
+        }
+        
+        .row .col-md-2 p {
+            font-size: 12px;
+        }
+        
+        a.stream-link {
+            background: #A31F34;
+            text-decoration: underline;
+            color: #fff !important;
+            padding: 3px 6px;
+        }
+        
+        a.stream-link:hover {
+            background: #000;
+            text-decoration: line-through;
+            /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#a0000e+0,000000+100 */
+            /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#a0000e+0,000000+100 */
+        }
+    </style>
 
 </head>
 
 <body class="container">
-  <div class="hidden-md hidden-lg hidden-xl hvr-grow" id="donate" target="_blank"><a target="_blank"
-      href="https://secure.actblue.com/donate/data-for-black-lives-1#basics">Donate to D4BL</a></div>
+    <div class="hidden-md hidden-lg hidden-xl hvr-grow" id="donate" target="_blank"><a target="_blank" href="https://secure.actblue.com/donate/data-for-black-lives-1#basics">Donate to D4BL</a></div>
 
-  <header style="">
-    <nav class="navbar navbar-default tembus navbar-fixed-to">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+    <header style="">
+        <nav class="navbar navbar-default tembus navbar-fixed-to">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
             <i class="fa  fa-angle-double-down "></i>
           </button>
 
-        </div>
-        <div class="collapse navbar-collapse" id="myNavbar">
-          <ul class="icons nav navbar-nav navbar-right">
-            <li><a href="https://twitter.com/data4blacklives" target="_blank" class="icon fa-twitter"><span
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="icons nav navbar-nav navbar-right">
+                        <li><a href="https://twitter.com/data4blacklives" target="_blank" class="icon fa-twitter"><span
                   class="label">Twitter</span></a></li>
-            <li><a href="https://www.instagram.com/data4blacklives/?hl=en" target="_blank"
-                class="icon fa-instagram"><span class="label">Twitter</span></a></li>
-            <li><a href="https://github.com/d4bl" target="_blank" class="icon fa fa-github"><span class="label"
+                        <li><a href="https://www.instagram.com/data4blacklives/?hl=en" target="_blank" class="icon fa-instagram"><span class="label">Twitter</span></a></li>
+                        <li><a href="https://github.com/d4bl" target="_blank" class="icon fa fa-github"><span class="label"
                   target="_top">Email</span></a></li>
-            <li id="join-us">
-              <a target="_BLANK"
-                href="https://docs.google.com/forms/d/e/1FAIpQLSdvyFQK_9n2GPvCRxuEetXHy4bsaeW99A22PprMSqjpMx-wWQ/viewform">
+                        <li id="join-us">
+                            <a target="_BLANK" href="https://docs.google.com/forms/d/e/1FAIpQLSdvyFQK_9n2GPvCRxuEetXHy4bsaeW99A22PprMSqjpMx-wWQ/viewform">
                 JOIN US
               </a>
-            </li>
-          </ul>
+                        </li>
+                    </ul>
 
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="/" class="hvrcenter">Home</a></li>
-            <li><a href="/programs.html" class="hvrcenter">Programs</a></li>
-            <li><a href="/conference.html" class="hvrcenter">Conference</a></li>
-            <li><a href="/events.html" class="hvrcenter">Events</a></li>
-            <li><a href="/action.html" class="hvrcenter">Action</a></li>
-            <li><a href="/press.html" class="hvrcenter">Press</a></li>
-            <li><a href="/about.html" class="hvrcenter">About</a></li>
-            <li><a target="_BLANK" href="https://medium.com/@YESHICAN" class="hvrcenter">Blog</a></li>
-<li><a target="_BLANK" href="/reports.html" class="hvrcenter">Reports</a></li>
-
-
-
-          </ul>
-        </div>
-      </div>
-    </nav>
-  </header>
-  <main class="col-sm-12 conference">
-    <!-- Header -->
-
-
-    <p class="text-lg col-md-12">
-      <h3>Annual D4BL Conference</h3>
-
-
-      <p>
-        <h3>2020:</h3>
-        <h3>Save the date for D4BL III</h3>
-        <div class="row">
-          <div class="col-md-6 col-md-push-3">
-            <img class="img-fluid" src="/images/d4blsavethedateudpated.jpg" alt="">
-            <p class="text-center">Registration opens September 2020</p>
-            
-          </div>
-         </div>
-      </p>
-
-      <p>
-        When: December 11-13, 2020
-      </p>
-      <p>
-        Where: MIT Media Lab, Cambridge, MA
-      </p>
-
-    </p>
-
-    <h3>2019: </h3>
-    <div class="siema-2 siema">
-      <iframe width="100%" height="auto" src="https://www.youtube.com/embed/iLBzLY1MEgA" frameborder="0"
-        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
-
-      <iframe width="100%" height="auto" src="https://www.youtube.com/embed/ayjxlu_UAT8" frameborder="0"
-        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
-
-      <iframe width="100%" height="auto" src="https://www.youtube.com/embed/D7oPhpl_4eg" frameborder="0"
-        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
-
-      <iframe width="100%" height="auto" src="https://www.youtube.com/embed/VOV_NM-axOs" frameborder="0"
-        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
-
-      <iframe width="100%" height="auto" src="https://www.youtube.com/embed/QfP4gpnEQuc" frameborder="0"
-        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
-
-      <iframe width="100%" height="auto" src="https://www.youtube.com/embed/1uOt3GriWAI" frameborder="0"
-        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
-
-      <iframe width="100%" height="auto" src="https://www.youtube.com/embed/jMgjeXyINtk" frameborder="0"
-        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
-
-      <iframe width="100%" height="auto" src="https://www.youtube.com/embed/SdGJgkX4NDw" frameborder="0"
-        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
-
-      <iframe width="100%" height="auto" src="https://www.youtube.com/embed/hr7XP4A98NU" frameborder="0"
-        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
-
-      <iframe width="100%" height="auto" src="https://www.youtube.com/embed/sGqRBi53EKs" frameborder="0"
-        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="/" class="hvrcenter">Home</a></li>
+                        <li><a href="/programs.html" class="hvrcenter">Programs</a></li>
+                        <li><a href="/conference.html" class="hvrcenter">Conference</a></li>
+                        <li><a href="/events.html" class="hvrcenter">Events</a></li>
+                        <li><a href="/action.html" class="hvrcenter">Action</a></li>
+                        <li><a href="/press.html" class="hvrcenter">Press</a></li>
+                        <li><a href="/about.html" class="hvrcenter">About</a></li>
+                        <li><a target="_BLANK" href="https://medium.com/@YESHICAN" class="hvrcenter">Blog</a></li>
+                        <li><a target="_BLANK" href="/reports.html" class="hvrcenter">Reports</a></li>
 
 
 
-
-
-    </div>
-
-    <div class="flex-center">
-      <button class="prev-2">Prev</button>
-      <button class="next-2">next</button>
-    </div>
-    <div class="clearfix"></div>
-    <a href="http://d4bl.org/documents/2019_conference-smallerbooklet.pdf">PROGRAM</a>
-
-    <h3>2018:</h3>
-
-
-
-
-
-    </p>
-
-
-    <div class="siema-1 siema">
-      <iframe width="100%" height="auto" src="https://www.youtube.com/embed/hz_14XQXGAc" frameborder="0"
-        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
-
-      <iframe width="100%" height="auto" src="https://www.youtube.com/embed/TrEiEjjt7v4" frameborder="0"
-        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
-
-      <iframe width="100%" height="auto" src="https://www.youtube.com/embed/rhCWnT38Ahs" frameborder="0"
-        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
-
-      <iframe width="100%" height="auto" src="https://www.youtube.com/embed/SkiZYZn-3q8" frameborder="0"
-        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
-
-      <iframe width="100%" height="auto" src="https://www.youtube.com/embed/VjX8qjwxNcw" frameborder="0"
-        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
-
-      <iframe width="100%" height="auto" src="https://www.youtube.com/embed/o-Ei1XrfzO8" frameborder="0"
-        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
-
-      <iframe width="100%" height="auto" src="https://www.youtube.com/embed/A7WqFusLYec" frameborder="0"
-        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
-
-      <iframe width="100%" height="auto" src="https://www.youtube.com/embed/nunutJXDtQE" frameborder="0"
-        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
-
-      <iframe width="100%" height="auto" src="https://www.youtube.com/embed/KaDYgYb1vzI" frameborder="0"
-        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
-
-      <iframe width="100%" height="auto" src="https://www.youtube.com/embed/RMHo79_X2UE" frameborder="0"
-        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
-
-
-
-
-
-
-    </div>
-
-    <div class="flex-center">
-      <button class="prev-1">Prev</button>
-      <button class="next-1">next</button>
-    </div>
-
-    <div class="clearfix"></div>
-    <a href="https://drive.google.com/drive/folders/1ol1tuZ_oNuWCSkIKs51poTeZUH171Gt2?usp=sharing">PROGRAM</a>
-
-    </div>
-
-
-    <div class="modal fade" id="squarespaceModal" tabindex="-1" role="dialog" aria-labelledby="modalLabel"
-      aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span
-                class="sr-only">Close</span></button>
-            <h3 class="modal-title" id="lineModalLabel">EMAIL D4BL</h3>
-          </div>
-          <div class="modal-body email ">
-
-
-            <form method="POST" action="http://formspree.io/data4blacklives@gmail.com">
-              <label>Email Adress</label>
-              <input type="email" name="email" placeholder="Your email">
-              <label>Message</label>
-              <textarea name="message" placeholder="Your message"></textarea>
-              <br>
-              <button class="btn btn-block btn-submit" type="submit">Send</button>
-            </form>
-
-          </div>
-          <div class="modal-footer hidden">
-            <div class="btn-group btn-group-justified" role="group" aria-label="group button">
-              <div class="btn-group" role="group">
-                <button type="button" class="btn btn-default" data-dismiss="modal" role="button">Close</button>
-              </div>
-              <div class="btn-group btn-delete hidden" role="group">
-                <button type="button" id="delImage" class="btn btn-default btn-hover-red" data-dismiss="modal"
-                  role="button">Delete</button>
-              </div>
-              <div class="btn-group" role="group">
-                <button type="button" id="saveImage" class="btn btn-default btn-hover-green" data-action="save"
-                  role="button">Save</button>
-              </div>
+                    </ul>
+                </div>
             </div>
-          </div>
+        </nav>
+    </header>
+    <main class="col-sm-12 conference">
+        <!-- Header -->
+
+
+        <p class="text-lg col-md-12">
+            <h3>Annual D4BL Conference</h3>
+
+
+            <p>
+                <h3>2020:</h3>
+                <h3>Save the date for D4BL III</h3>
+                <div class="row">
+                    <div class="col-md-6 col-md-push-3">
+                        <img class="img-fluid" src="/images/d4blsavethedateudpated.jpg" alt="">
+                        <p class="text-center">Registration opens September 2020</p>
+                        <button class="btn-block" data-toggle="modal" data-target="#faq"> View Conference FAQ </button>
+
+
+                    </div>
+                </div>
+            </p>
+
+            <p>
+                When: December 11-13, 2020
+            </p>
+            <p>
+                Where: MIT Media Lab, Cambridge, MA
+            </p>
+
+        </p>
+
+        <h3>2019: </h3>
+        <div class="siema-2 siema">
+            <iframe width="100%" height="auto" src="https://www.youtube.com/embed/iLBzLY1MEgA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+
+            <iframe width="100%" height="auto" src="https://www.youtube.com/embed/ayjxlu_UAT8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+
+            <iframe width="100%" height="auto" src="https://www.youtube.com/embed/D7oPhpl_4eg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+
+            <iframe width="100%" height="auto" src="https://www.youtube.com/embed/VOV_NM-axOs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+
+            <iframe width="100%" height="auto" src="https://www.youtube.com/embed/QfP4gpnEQuc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+
+            <iframe width="100%" height="auto" src="https://www.youtube.com/embed/1uOt3GriWAI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+
+            <iframe width="100%" height="auto" src="https://www.youtube.com/embed/jMgjeXyINtk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+
+            <iframe width="100%" height="auto" src="https://www.youtube.com/embed/SdGJgkX4NDw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+
+            <iframe width="100%" height="auto" src="https://www.youtube.com/embed/hr7XP4A98NU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+
+            <iframe width="100%" height="auto" src="https://www.youtube.com/embed/sGqRBi53EKs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+
+
+
+
+
         </div>
-      </div>
-    </div>
+
+        <div class="flex-center">
+            <button class="prev-2">Prev</button>
+            <button class="next-2">next</button>
+        </div>
+        <div class="clearfix"></div>
+        <a href="http://d4bl.org/documents/2019_conference-smallerbooklet.pdf">PROGRAM</a>
+        <div id="app">
+            <div class="modal fade" id="faq" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h2 class="c6">FAQ Webpage D4BL Conference III December 2020</h2>
+                        </div>
+                        <div class="modal-body">
+                            <div class="c4">
+                                <p class="c5">
+
+                                </p>
+                                <p class="c3"><span class="c2"></span></p>
+                                <p class="c5">
+                                    <span class="c1">Is the conference still happening? </span
+                              ><span
+                                >At this time we are moving forward with the conference as planned and
+                                taking into consideration the health and safety of everyone involved. If
+                                this changes, we will be in communication with you. Please be sure to
+                                sign up for our newsletter at: </span
+                              ><span class="c0"
+                                ><a
+                                  class="c8"
+                                  href="https://www.google.com/url?q=http://d4bl.org/&amp;sa=D&amp;ust=1590224616627000"
+                                  >http://d4bl.org/</a
+                                ></span
+                              ><span>&nbsp;so you don&rsquo;t miss any updates. </span>
+                                </p>
+                                <p class="c3"><span class="c1 c9"></span></p>
+                                <p class="c5">
+                                    <span class="c1">When and where is the conference?</span
+                              ><span class="c2"
+                                >&nbsp;December 11-13, 2020 at the MIT Media Lab, Cambridge, MA</span
+                              >
+                            </p>
+                            <p class="c3"><span class="c2"></span></p>
+                                <p class="c5">
+                                    <span class="c1">When do the tickets go on sale?</span
+                              ><span class="c2">&nbsp;In September. </span>
+                                </p>
+                                <p class="c3"><span class="c2"></span></p>
+                                <p class="c5">
+                                    <span class="c1">How much are tickets? </span
+                              ><span class="c2"
+                                >$300 general admission tickets and $75 student tickets</span
+                              >
+                            </p>
+                            <p class="c3"><span class="c2"></span></p>
+                                <p class="c5">
+                                    <span class="c1">What does the ticket price include? Is this the same for students? </span
+                              ><span
+                                >Tickets include access to all conference panels/workshops (more details
+                                to come as programming is finalized), and &nbsp;meals: Friday evening,
+                                Saturday breakfast and lunch, Sunday breakfast and lunch.
+                              </span>
+                                </p>
+                                <p class="c3"><span class="c2"></span></p>
+                                <p class="c5">
+                                    <span class="c1">How will I be notified when tickets go on sale?</span
+                              ><span>&nbsp;You can register for our newsletter (via our website </span
+                              ><span class="c0"
+                                ><a
+                                  class="c8"
+                                  href="https://www.google.com/url?q=http://d4bl.org/&amp;sa=D&amp;ust=1590224616628000"
+                                  >http://d4bl.org/</a
+                                ></span
+                              ><span class="c2"
+                                >), you&#39;ll receive notice once registration is opened.
+                              </span>
+                                </p>
+                                <p class="c3"><span class="c2"></span></p>
+                                <p class="c5">
+                                    <span class="c1">Is there an RFP?</span
+                              ><span class="c2"
+                                >&nbsp;The deadline for RFP was March 30. We are no longer accepting
+                                proposals.
+                              </span>
+                                </p>
+                                <p class="c3"><span class="c2"></span></p>
+                                <p class="c5">
+                                    <span class="c1">I am interested in sponsorship possibilities. Who do I reach out
+                                to?</span
+                              ><span>&nbsp;Thank you for your interest. Please email </span
+                              ><span class="c0 c7"
+                                ><a class="c8" href="mailto:conference@d4bl.org"
+                                  >conference@d4bl.org</a
+                                ></span
+                              ><span class="c2">&nbsp;and we will be in contact with you.</span>
+                                </p>
+                                <p class="c3"><span class="c2"></span></p>
+                                <p class="c5">
+                                    <span class="c1">I&rsquo;d like to support others who would like to attend as a
+                                scholarship sponsor or support the fund to provide travel, accomodation
+                                and child care assistance to ensure our conference supports the broad
+                                range of the socio economic levels our community represents. Where can I
+                                donate? </span
+                              ><span>Please visit our </span
+                              ><span class="c0"
+                                ><a
+                                  class="c8"
+                                  href="https://www.google.com/url?q=https://secure.actblue.com/donate/d4bl3&amp;sa=D&amp;ust=1590224616629000"
+                                  >D4BL III Scholarship Fund</a
+                                ></span
+                              ><span class="c2">. </span>
+                                </p>
+                                <p class="c3"><span class="c2"></span></p>
+                                <p class="c5">
+                                    <span class="c1">I&rsquo;d like to volunteer, where do I sign up?</span
+                              ><span
+                                >&nbsp;Thank you for your interest in supporting the conference by
+                                volunteering. Please fill out this </span
+                              ><span class="c0 c7"
+                                ><a
+                                  class="c8"
+                                  href="https://www.google.com/url?q=https://docs.google.com/forms/d/1Pyecs8kYZz5QN-uDxYUEB09uTOG2DlUvXu1JhQIBWig/edit&amp;sa=D&amp;ust=1590224616630000"
+                                  >form</a
+                                ></span
+                              ><span class="c2"
+                                >. Please note, we will be starting volunteer outreach in August and you
+                                will receive more detailed information at that time.
+                              </span>
+                                </p>
+                                <p class="c3"><span class="c2"></span></p>
+                                <p class="c5">
+                                    <span class="c1">Do you offer scholarships?</span
+                              ><span
+                                >&nbsp;We do offer full and partial scholarships for travel, lodging,
+                                childcare, and some meals. Please fill out this </span
+                              ><span class="c0 c7"
+                                ><a
+                                  class="c8"
+                                  href="https://www.google.com/url?q=https://forms.gle/kGjuQA3dMNN24JeMA&amp;sa=D&amp;ust=1590224616630000"
+                                  >form</a
+                                ></span
+                              ><span class="c2">. You will be notified by August 15th. </span>
+                                </p>
+                                <p class="c3"><span class="c2"></span></p>
+                                <p class="c3"><span class="c2"></span></p>
+                            </div>
+
+
+                        </div>
+                        <div class="modal-footer hidden">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h3>2018:</h3>
+
+
+
+
+
+        </p>
+
+
+        <div class="siema-1 siema">
+            <iframe width="100%" height="auto" src="https://www.youtube.com/embed/hz_14XQXGAc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+
+            <iframe width="100%" height="auto" src="https://www.youtube.com/embed/TrEiEjjt7v4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+
+            <iframe width="100%" height="auto" src="https://www.youtube.com/embed/rhCWnT38Ahs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+
+            <iframe width="100%" height="auto" src="https://www.youtube.com/embed/SkiZYZn-3q8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+
+            <iframe width="100%" height="auto" src="https://www.youtube.com/embed/VjX8qjwxNcw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+
+            <iframe width="100%" height="auto" src="https://www.youtube.com/embed/o-Ei1XrfzO8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+
+            <iframe width="100%" height="auto" src="https://www.youtube.com/embed/A7WqFusLYec" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+
+            <iframe width="100%" height="auto" src="https://www.youtube.com/embed/nunutJXDtQE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+
+            <iframe width="100%" height="auto" src="https://www.youtube.com/embed/KaDYgYb1vzI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+
+            <iframe width="100%" height="auto" src="https://www.youtube.com/embed/RMHo79_X2UE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
 
 
 
 
 
 
-    <div class="clearfix">
+        </div>
 
-    </div>
-    <!-- Footer -->
-    <footer class="row" id="footer">
-      <ul class="icons hidden">
-        <li><a href="https://twitter.com/data4blacklives" target="_blank" class="icon fa-twitter"><span
+        <div class="flex-center">
+            <button class="prev-1">Prev</button>
+            <button class="next-1">next</button>
+        </div>
+
+        <div class="clearfix"></div>
+        <a href="https://drive.google.com/drive/folders/1ol1tuZ_oNuWCSkIKs51poTeZUH171Gt2?usp=sharing">PROGRAM</a>
+
+        </div>
+
+
+        <div class="modal fade" id="squarespaceModal" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span
+                class="sr-only">Close</span></button>
+                        <h3 class="modal-title" id="lineModalLabel">EMAIL D4BL</h3>
+                    </div>
+                    <div class="modal-body email ">
+
+
+                        <form method="POST" action="http://formspree.io/data4blacklives@gmail.com">
+                            <label>Email Adress</label>
+                            <input type="email" name="email" placeholder="Your email">
+                            <label>Message</label>
+                            <textarea name="message" placeholder="Your message"></textarea>
+                            <br>
+                            <button class="btn btn-block btn-submit" type="submit">Send</button>
+                        </form>
+
+                    </div>
+                    <div class="modal-footer hidden">
+                        <div class="btn-group btn-group-justified" role="group" aria-label="group button">
+                            <div class="btn-group" role="group">
+                                <button type="button" class="btn btn-default" data-dismiss="modal" role="button">Close</button>
+                            </div>
+                            <div class="btn-group btn-delete hidden" role="group">
+                                <button type="button" id="delImage" class="btn btn-default btn-hover-red" data-dismiss="modal" role="button">Delete</button>
+                            </div>
+                            <div class="btn-group" role="group">
+                                <button type="button" id="saveImage" class="btn btn-default btn-hover-green" data-action="save" role="button">Save</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+        <div class="clearfix">
+
+        </div>
+        <!-- Footer -->
+        <footer class="row" id="footer">
+            <ul class="icons hidden">
+                <li><a href="https://twitter.com/data4blacklives" target="_blank" class="icon fa-twitter"><span
               class="label">Twitter</span></a></li>
-        <li data-toggle="modal" data-target="#squarespaceModal"><a class="icon fa-envelope-o"><span class="label"
+                <li data-toggle="modal" data-target="#squarespaceModal"><a class="icon fa-envelope-o"><span class="label"
               target="_top">Email</span></a></li>
-      </ul>
-      <ul class="copyright">
-        <li>&copy; Data for Black Lives.</li>
-        <li>Credits: <a href="http://d4bl.org">Data for Black Lives</a></li>
-      </ul>
-    </footer>
-  </main>
+            </ul>
+            <ul class="copyright">
+                <li>&copy; Data for Black Lives.</li>
+                <li>Credits: <a href="http://d4bl.org">Data for Black Lives</a></li>
+            </ul>
+        </footer>
+    </main>
 
 
 
 
 
 
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
-    integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-    crossorigin="anonymous"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
 
-  <script src="main.js"></script>
+    <script src="main.js"></script>
 
-  <script>
+    <script>
+        $(document).ready(function() {
+            $('[data-toggle="popover"]').popover({
+                trigger: 'hover',
+                html: false,
+                placement: "top"
 
-    $(document).ready(function () {
-      $('[data-toggle="popover"]').popover({
-        trigger: 'hover',
-        html: false,
-        placement: "top"
+            });
+        });
+    </script>
+    <script>
+        // Siema 1.3.0 introuduced a basic callbacks
+        // https://github.com/pawelgrzybek/siema/releases/tag/v.1.3.0
 
-      });
-    });
+        function onInitCallback() {
+            console.log('Siema initialised bro :)');
+        }
 
-  </script>
-  <script>
+        function onChangeCallback() {
+            console.log(`The index of current slide is: ${this.currentSlide}`);
+        }
 
-    // Siema 1.3.0 introuduced a basic callbacks
-    // https://github.com/pawelgrzybek/siema/releases/tag/v.1.3.0
+        const mySiema = new Siema({
+            selector: '.siema-1',
+            loop: false,
+            perPage: 2
+        });
 
-    function onInitCallback() {
-      console.log('Siema initialised bro :)');
-    }
+        const prev = document.querySelector('.prev-1');
+        const next = document.querySelector('.next-1');
 
-    function onChangeCallback() {
-      console.log(`The index of current slide is: ${this.currentSlide}`);
-    }
+        prev.addEventListener('click', () => mySiema.prev(2));
+        next.addEventListener('click', () => mySiema.next(2));
 
-    const mySiema = new Siema({
-      selector: '.siema-1',
-      loop: false,
-      perPage: 2
-    });
+        const mySiema2 = new Siema({
+            selector: '.siema-2',
+            loop: false,
+            perPage: 2
+        });
 
-    const prev = document.querySelector('.prev-1');
-    const next = document.querySelector('.next-1');
+        const prev2 = document.querySelector('.prev-2');
+        const next2 = document.querySelector('.next-2');
 
-    prev.addEventListener('click', () => mySiema.prev(2));
-    next.addEventListener('click', () => mySiema.next(2));
+        prev2.addEventListener('click', () => mySiema2.prev(2));
+        next2.addEventListener('click', () => mySiema2.next(2));
+    </script>
 
-    const mySiema2 = new Siema({
-      selector: '.siema-2',
-      loop: false,
-      perPage: 2
-    });
+    <script>
+        var cv = new Vue({
+            el: "#app",
 
-    const prev2 = document.querySelector('.prev-2');
-    const next2 = document.querySelector('.next-2');
+            data: {
+                faq: ""
+            },
+            mounted() {
+                this.fetchData()
+            },
+            methods: {
+                fetchData: function() {
+                    let url = `https://docs.google.com/document/d/1KcIVUtCafUx9vyogwW5XS3d4YROxCww4RGZMK4puyJw/pub?embedded=true`;
+                    return axios.get(url).then((value) => {
+                        console.log(value);
 
-    prev2.addEventListener('click', () => mySiema2.prev(2));
-    next2.addEventListener('click', () => mySiema2.next(2));
-  </script>
+                        let f = R.replace(/<style((.|\n|\r)*?)<\/style>/, "", value.data);
+
+                        this.faq = f;
+                    });
+                },
+            },
+        });
+    </script>
 </body>
 
 </html>
