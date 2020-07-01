@@ -1,49 +1,24 @@
 <!DOCTYPE html>
 
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="utf-8" />
-    <link
-      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-      rel="stylesheet"
-      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
-      crossorigin="anonymous"
-    />
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous" />
     <title>Data 4 Black Lives | Press</title>
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, user-scalable=no"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Space+Mono"
-      rel="stylesheet"
-    />
-    <link
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
-      crossorigin="anonymous"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link href="https://fonts.googleapis.com/css?family=Space+Mono" rel="stylesheet" />
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" />
     <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
 
-    <script
-      src="https://code.jquery.com/jquery-3.2.1.min.js"
-      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-      crossorigin="anonymous"
-    ></script>
-  </head>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+</head>
 
-  <body class="container">
-    <div
-      class="hidden-md hidden-lg hidden-xl"
-      id="donate"
-      target="_blank"
-      class="hvr-grow"
-    >
-      <a
-        target="_blank"
-        href="https://secure.actblue.com/donate/data-for-black-lives-1#basics"
-        >Donate to D4BL</a
+<body class="container">
+    <div class="hidden-md hidden-lg hidden-xl" id="donate" target="_blank" class="hvr-grow">
+        <a target="_blank" href="https://secure.actblue.com/donate/data-for-black-lives-1#basics">Donate to D4BL</a
       >
     </div>
 
@@ -93,25 +68,21 @@
                 >
                   JOIN US
                 </a>
-              </li>
-            </ul>
+        </li>
+        </ul>
 
-            <ul class="nav navbar-nav navbar-right">
-              <li><a href="/" class="hvrcenter">Home</a></li>
-              <li><a href="/programs.html" class="hvrcenter">Programs</a></li>
-              <li>
+        <ul class="nav navbar-nav navbar-right">
+            <li><a href="/" class="hvrcenter">Home</a></li>
+            <li><a href="/programs.html" class="hvrcenter">Programs</a></li>
+            <li>
                 <a href="/conference.html" class="hvrcenter">Conference</a>
-              </li>
-              <li><a href="/events.html" class="hvrcenter">Events</a></li>
-              <li><a href="/action.html" class="hvrcenter">Action</a></li>
-              <li><a href="/press.html" class="hvrcenter">Press</a></li>
-              <li><a href="/about.html" class="hvrcenter">About</a></li>
-              <li>
-                <a
-                  target="_BLANK"
-                  href="https://medium.com/@YESHICAN"
-                  class="hvrcenter"
-                  >Blog</a
+            </li>
+            <li><a href="/events.html" class="hvrcenter">Events</a></li>
+            <li><a href="/action.html" class="hvrcenter">Action</a></li>
+            <li><a href="/press.html" class="hvrcenter">Press</a></li>
+            <li><a href="/about.html" class="hvrcenter">About</a></li>
+            <li>
+                <a target="_BLANK" href="https://medium.com/@YESHICAN" class="hvrcenter">Blog</a
                 >
               </li>
               <li>
@@ -124,41 +95,19 @@
         </div>
       </nav>
     </header>
-    <main class="col-sm-12 about">
+    <main class="col-sm-12 about" id="app">
       <p class="text-lg col-md-12"></p>
       <h1>
         Press
       </h1>
 
       <ul>
-        <a
-          href="https://www.forbes.com/sites/ashoka/2019/12/11/why-we-need-data-for-black-lives/#317d17c27bd4"
-          >Why We Need Data for Black Lives</a
+
+        <a target="_BLANK" v-for="story in entries" :href="story.gsx$link.$t">{{story.gsx$title.$t}}</a>
+
+                <a href="https://www.forbes.com/sites/ashoka/2019/12/11/why-we-need-data-for-black-lives/#317d17c27bd4">Why We Need Data for Black Lives</a
         >
-        <a
-          href="https://www.forbes.com/profile/data-for-black-lives/#57d85c99c6ed"
-          >Forbes Under 30</a
-        >
-        <a
-          href="https://nextcity.org/daily/entry/data-for-black-conference-boston-scientists-activists"
-          >Data for Black Lives Wants to Connect Scientists and Activists</a
-        >
-        <a
-          href="https://garage.vice.com/en_us/article/kzn4jn/data-for-black-lives-is-an-organization-using-analytics-as-a-tool-for-social-change"
-          >Data for Black Lives Is an Organization Using Analytics as a Tool for
-          Social Change</a
-        >
-        <a
-          href="https://www.dailykos.com/stories/2017/12/18/1724131/-Data-for-Black-Lives-How-to-Design-Justice"
-          >Data for Black Lives: How to Design Justice</a
-        >
-        <a
-          href="https://medium.com@YESHICAN"/an-open-letter-to-facebook-from-the-data-for-black-lives-movement-81e693c6b46c"
-          >What if Facebook Used Data for Black Lives?</a
-        >
-        <a href="https://d4bl.typeform.com/to/M7Hu7L"
-          >Request a press statement</a
-        >
+        
       </ul>
     </main>
 
@@ -180,6 +129,25 @@
           placement: "top",
         });
       });
+    </script>
+    <script>
+      var cv = new Vue({
+        el: "#app",
+
+        data: {
+            entries: [],
+            modalText: "",
+            showModal: false,
+            sheetUrl: "https://spreadsheets.google.com/feeds/list/1ZOEW8gGFo8g-mzaDsoodt6HmGSZA5RTpvCSiMvjl3MA/1/public/values?alt=json",
+        },
+
+        mounted() {
+          return axios.get(this.sheetUrl).then((row) => {
+              console.log(row.data.feed.entry);
+              this.entries = row.data.feed.entry
+          });
+          }
+        });
     </script>
   </body>
 </html>
