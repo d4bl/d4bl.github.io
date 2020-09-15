@@ -11,6 +11,24 @@
 
 /* Reset */
 
+.viz {
+    margin-bottom: 2rem !important;
+}
+
+.card {
+    background: #fff;
+    color: #000 !important
+}
+
+.card {
+    background: #fff;
+    color: #000 !important
+}
+
+.card * {
+    color: #000 !important
+}
+
 .hvr-grow {
     display: inline-block;
     vertical-align: middle;
