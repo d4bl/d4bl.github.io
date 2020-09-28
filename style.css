@@ -8,8 +8,28 @@
     line-height: 1.65em;
 }
 
+.reports ol,
+.reports ul {
+    padding-left: 3rem;
+}
+
+.reports ol li {
+    border-bottom: 4px solid #000;
+    margin-bottom: 1rem;
+}
+
+p strong,
+th,
+thead {
+    text-transform: uppercase !important;
+}
+
 
 /* Reset */
+
+.tableauPlaceholder {
+    margin: 0 auto;
+}
 
 .viz {
     margin-bottom: 2rem !important;
