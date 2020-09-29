@@ -8,9 +8,19 @@
     line-height: 1.65em;
 }
 
-.reports ol,
-.reports ul {
+.reports section ol,
+.reports section ul {
     padding-left: 3rem;
+}
+
+.card section:nth-of-type(even) {
+    background-color: #ABC7C9;
+}
+
+.card section {
+    padding: 1rem;
+    margin: -1rem;
+    margin-bottom: 1rem;
 }
 
 .reports ol li {
@@ -58,6 +68,10 @@ thead {
     -moz-osx-font-smoothing: grayscale;
     transition-duration: 0.3s;
     transition-property: transform;
+}
+
+section p>strong {
+    font-size: 1.67rem;
 }
 
 .donate {
@@ -266,6 +280,10 @@ body {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
+}
+
+.nav>li>a {
+    padding: 10px;
 }
 
 
@@ -1847,10 +1865,6 @@ programs {
     font-family: 'FontAwesome', sans-serif;
     font-size: 1.1em;
 }
-#reports>* {
-    padding: 1rem;
-    ;
-}
 #reports .actions {
     justify-content: space-between;
     align-items: center;
@@ -1875,6 +1889,9 @@ programs {
 }
 #reports main button:focus {
     outline: none;
+}
+#reports>article {
+    padding: 1rem !important;
 }
 
 /* Background Colors*/
@@ -2102,4 +2119,17 @@ h6 {
     orphans: 2;
     widows: 2;
     text-align: left;
+}
+#github {
+    border: 1px solid #000 !important;
+    border-radius: 30px !important;
+    background-color: transparent;
+    padding: .5rem 1.5rem;
+    display: inline-block;
+}
+.navbar-default .navbar-nav>.open>a,
+.navbar-default .navbar-nav>.open>a:hover,
+.dropdown-menu *,
+.dropdown-menu {
+    background-color: transparent !important;
 }

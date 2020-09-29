@@ -86,27 +86,36 @@
                 >
               </li>
               <li>
-                <a target="_BLANK" href="/reports.html" class="hvrcenter"
-                  >Reports</a
-                >
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
+
+                <a class="dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                      Research
+                      <span class="caret"></span>
+                    </a>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                    <li><a href="/reports.html">Action</a></li>
+                    <li><a href="covid19-data.html">Another action</a></li>
+
+                </ul>
+
+            </li>
+
+        </ul>
+    </div>
+    </div>
+    </nav>
     </header>
     <main class="col-sm-12 about" id="app">
-      <p class="text-lg col-md-12"></p>
-      <h1>
-        Press
-      </h1>
+        <p class="text-lg col-md-12"></p>
+        <h1>
+            Press
+        </h1>
 
-      <ul>
+        <ul>
 
-        <a target="_BLANK" v-for="story in entries" :href="story.gsx$link.$t">{{story.gsx$title.$t}}</a>
+            <a target="_BLANK" v-for="story in entries" :href="story.gsx$link.$t">{{story.gsx$title.$t}}</a>
 
 
-                <a href="https://d4bl.typeform.com/to/M7Hu7L">Request a press statement</a
+            <a href="https://d4bl.typeform.com/to/M7Hu7L">Request a press statement</a
         >
       </ul>
     </main>
