@@ -2128,8 +2128,10 @@ h6 {
     display: inline-block;
 }
 .navbar-default .navbar-nav>.open>a,
-.navbar-default .navbar-nav>.open>a:hover,
+.navbar-default .navbar-nav>.open>a:hover {
+    background-color: transparent !important;
+}
 .dropdown-menu *,
 .dropdown-menu {
-    background-color: transparent !important;
+    background-color: #000 !important;
 }
