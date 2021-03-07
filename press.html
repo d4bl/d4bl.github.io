@@ -113,7 +113,7 @@
 
         <ul>
 
-            <a target="_BLANK" v-for="story in entries" :href="story.gsx$link.$t">{{story.gsx$title.$t}}</a>
+            <a target="_BLANK" v-for="story in entriesOrdered" :href="story.gsx$link.$t">{{story.gsx$title.$t}}</a>
 
 
             <a href="https://d4bl.typeform.com/to/M7Hu7L">Request a press statement</a
@@ -143,7 +143,9 @@
     <script>
       var cv = new Vue({
         el: "#app",
-
+        computed: {entriesOrdered(){
+          return this.entries.slice().reverse()
+        }},
         data: {
             entries: [],
             modalText: "",
